@@ -1,0 +1,14 @@
+set term pdf enhanced
+set output "plot.pdf"
+
+#set xrange [0:250]
+#set xtics ${xmax}/10
+
+#set logscale y 10
+plot \
+	"earth.data" using (-$1):2 with lines title "Earth", \
+	"cliff.data" using (-$1):2 with lines title "Cliff", \
+	"cliffh.data" using (-$1):2 with lines title "Cliff + Hole",\
+	"cube.data" using (-$1):2 with lines title "Cube",\
+	"pyramidh.data" using (-$1):2 with lines title "Hollow Pyramid",\
+	"pyramid.data" using (-$1):2 with lines title "Pyramid",\

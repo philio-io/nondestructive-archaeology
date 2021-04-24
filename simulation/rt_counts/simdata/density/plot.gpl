@@ -1,0 +1,14 @@
+set term pdf enhanced
+set output "plot.pdf"
+
+#set xrange [0:250]
+#set xtics ${xmax}/10
+
+#set logscale y 10
+plot \
+	"d0.1.data" using (-$1):2 with lines title "0.1", \
+	"d1.data" using (-$1):2 with lines title "1", \
+	"d10.data" using (-$1):2 with lines title "10", \
+	"d100.data" using (-$1):2 with lines title "100", \
+	"d1000.data" using (-$1):2 with lines title "1000", \
+

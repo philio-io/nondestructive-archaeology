@@ -1,0 +1,9 @@
+set term pdf enhanced
+set output "cliff.pdf"
+
+#set yrange [0:100]
+
+plot \
+	"d.data" using (-$2):4 with lines title "cliff",\
+	"e.data" using (-$2):4 with lines title "earth",\
+
